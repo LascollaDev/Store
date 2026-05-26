@@ -302,7 +302,7 @@ html{scroll-padding-top:60px}body{font-family:var(--fb);background:var(--bg);col
       <li>Sem lançamentos VIP</li>
       <li>Garantia de 7 dias</li>
     </ul>
-    <a href="#" onclick="checkout();return false" class="pln-btn pln-btn--ghost">Escolher Básico</a>
+    <a href="#" onclick="checkout('https://ggcheckout.app/checkout/v5/6Ed9FJE8HXebnxREUKCQ',9.97);return false" class="pln-btn pln-btn--ghost">Escolher Básico</a>
   </div>
 
   <!-- AVANÇADO -->
@@ -330,7 +330,7 @@ html{scroll-padding-top:60px}body{font-family:var(--fb);background:var(--bg);col
       <li>Suporte WhatsApp</li>
       <li>Garantia de 7 dias</li>
     </ul>
-    <a href="#" onclick="checkout();return false" class="pln-btn">Assinar Avançado</a>
+    <a href="#" onclick="checkout('https://ggcheckout.app/checkout/v4/BvIb4ex53LM73mU3DJsX',19.97);return false" class="pln-btn">Assinar Avançado</a>
   </div>
 
   <!-- VITALÍCIO -->
@@ -359,7 +359,7 @@ html{scroll-padding-top:60px}body{font-family:var(--fb);background:var(--bg);col
       <li>Online Desbloqueado</li>
       <li>Garantia de 7 dias</li>
     </ul>
-    <a href="#" onclick="checkout();return false" class="pln-btn pln-btn--cta">GARANTIR BIBLIOTECA COMPLETA</a>
+    <a href="#" onclick="checkout('https://ggcheckout.app/checkout/v5/pdDOCAlm20ZQxjUiglc3',49.97);return false" class="pln-btn pln-btn--cta">GARANTIR BIBLIOTECA COMPLETA</a>
   </div>
 
 </div>
@@ -410,7 +410,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 (function(){var F=[{q:'É seguro? Posso confiar?',a:'Sim. Instalação 100% limpa. Sem arquivo suspeito. Mais de 5.000 clientes ativos comprovam.'},{q:'Como funciona o acesso?',a:'Você recebe o software Lascolla Store por e-mail após o pagamento. Instala no PC, insere sua licença, e o catálogo completo fica disponível em minutos.'},{q:'Precisa de conta na Steam?',a:'Sim. Você usa sua conta normal da Steam. Os jogos ficam acessíveis pela sua biblioteca.'},{q:'Funciona online?',a:'Sim. Os títulos compatíveis com modo online funcionam normalmente.'},{q:'A licença expira?',a:'A licença é vitalícia. Uma vez pago, o acesso é seu pra sempre. Inclui atualizações e suporte.'},{q:'Aceita PIX, cartão e boleto?',a:'Sim, todos. PIX libera o acesso em segundos. Taxa única, sem cobrança recorrente.'},{q:'Tem suporte?',a:'Sim. WhatsApp com gente real. Não é bot — é uma pessoa que te responde rápido.'}];var fl=document.getElementById('fl');fl.innerHTML=F.map(function(f){return'<div class="faq-item reveal"><button class="faq-q" onclick="tFaq(this)">'+f.q+'<span class="faq-chev">▼</span></button><div class="faq-a">'+f.a+'</div></div>'}).join('');fl.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 function tFaq(b){var a=b.nextElementSibling,o=b.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(function(q){q.classList.remove('open');q.nextElementSibling.classList.remove('open')});if(!o){b.classList.add('open');a.classList.add('open')}}
 function checkout(url,val){
-if(!url){url='https://www.ggcheckout.com/checkout/v4/BvIb4ex53LM73mU3DJsX';val=19.97}
+if(!url){url='https://ggcheckout.app/checkout/v4/BvIb4ex53LM73mU3DJsX';val=19.97}
 // TikTok InitiateCheckout event
 
 // Collect UTMs from URL + Utmify storage + cookies + sessionStorage
