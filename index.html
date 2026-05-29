@@ -362,41 +362,51 @@ html{scroll-padding-top:60px}body{font-family:var(--fb);background:var(--bg);col
     </ul>
     <a href="#" onclick="checkout('https://ggcheckout.app/checkout/v5/pdDOCAlm20ZQxjUiglc3',49.97);return false" class="pln-btn pln-btn--cta">GARANTIR BIBLIOTECA COMPLETA</a>
   </div>
-<div style="
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  padding: 40px 24px;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: sans-serif;
-">
+<div style="width: 100%; background: #0a0a0a; padding: 40px 0;">
+  <div id="selos-grid" style="
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+    font-family: sans-serif;
+  ">
 
-  <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:16px 12px; text-align:center;">
-    <div style="font-size:30px;">🛡️</div>
-    <div style="color:#25D366; font-weight:bold; font-size:13px; margin-top:8px;">7 Dias de Garantia</div>
-    <div style="color:#aaa; font-size:11px; margin-top:4px;">Reembolso sem perguntas</div>
+    <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:20px 16px; text-align:center;">
+      <div style="font-size:32px;">🛡️</div>
+      <div style="color:#25D366; font-weight:bold; font-size:14px; margin-top:10px;">7 Dias de Garantia</div>
+      <div style="color:#aaa; font-size:12px; margin-top:6px;">Reembolso sem perguntas</div>
+    </div>
+
+    <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:20px 16px; text-align:center;">
+      <div style="font-size:32px;">🔒</div>
+      <div style="color:#25D366; font-weight:bold; font-size:14px; margin-top:10px;">Pagamento Seguro</div>
+      <div style="color:#aaa; font-size:12px; margin-top:6px;">Seus dados protegidos</div>
+    </div>
+
+    <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:20px 16px; text-align:center;">
+      <div style="font-size:32px;">💬</div>
+      <div style="color:#25D366; font-weight:bold; font-size:14px; margin-top:10px;">Suporte Rápido</div>
+      <div style="color:#aaa; font-size:12px; margin-top:6px;">Atendimento via WhatsApp</div>
+    </div>
+
+    <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:20px 16px; text-align:center;">
+      <div style="font-size:32px;">⚡</div>
+      <div style="color:#25D366; font-weight:bold; font-size:14px; margin-top:10px;">Acesso Imediato</div>
+      <div style="color:#aaa; font-size:12px; margin-top:6px;">Em até 5 minutos</div>
+    </div>
+
   </div>
-
-  <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:16px 12px; text-align:center;">
-    <div style="font-size:30px;">🔒</div>
-    <div style="color:#25D366; font-weight:bold; font-size:13px; margin-top:8px;">Pagamento Seguro</div>
-    <div style="color:#aaa; font-size:11px; margin-top:4px;">Seus dados protegidos</div>
-  </div>
-
-  <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:16px 12px; text-align:center;">
-    <div style="font-size:30px;">💬</div>
-    <div style="color:#25D366; font-weight:bold; font-size:13px; margin-top:8px;">Suporte Rápido</div>
-    <div style="color:#aaa; font-size:11px; margin-top:4px;">Atendimento via WhatsApp</div>
-  </div>
-
-  <div style="background:#111; border:1px solid #25D366; border-radius:12px; padding:16px 12px; text-align:center;">
-    <div style="font-size:30px;">⚡</div>
-    <div style="color:#25D366; font-weight:bold; font-size:13px; margin-top:8px;">Acesso Imediato</div>
-    <div style="color:#aaa; font-size:11px; margin-top:4px;">Em até 5 minutos</div>
-  </div>
-
 </div>
+
+<style>
+  @media (max-width: 600px) {
+    #selos-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+</style>
   
 </div>
 </div>
