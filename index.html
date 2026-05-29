@@ -362,6 +362,77 @@ html{scroll-padding-top:60px}body{font-family:var(--fb);background:var(--bg);col
     <a href="#" onclick="checkout('https://ggcheckout.app/checkout/v5/pdDOCAlm20ZQxjUiglc3',49.97);return false" class="pln-btn pln-btn--cta">GARANTIR BIBLIOTECA COMPLETA</a>
   </div>
 
+<!-- Contador Regressivo -->
+<div id="timer-bar" style="
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  border: 1px solid #25D366;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 30px auto;
+  max-width: 600px;
+  font-family: sans-serif;
+">
+  <p style="color: #25D366; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 8px;">
+    ⚡ Oferta por tempo limitado
+  </p>
+  <p style="color: white; font-size: 16px; margin: 0 0 16px;">
+    Essa promoção expira em:
+  </p>
+  <div style="display: flex; justify-content: center; gap: 16px;">
+    <div style="background:#25D366; border-radius:8px; padding:12px 18px; min-width:60px;">
+      <div id="hours" style="font-size:32px; font-weight:bold; color:white;">00</div>
+      <div style="font-size:11px; color:white; opacity:0.8;">HORAS</div>
+    </div>
+    <div style="font-size:32px; color:#25D366; line-height:60px;">:</div>
+    <div style="background:#25D366; border-radius:8px; padding:12px 18px; min-width:60px;">
+      <div id="minutes" style="font-size:32px; font-weight:bold; color:white;">00</div>
+      <div style="font-size:11px; color:white; opacity:0.8;">MIN</div>
+    </div>
+    <div style="font-size:32px; color:#25D366; line-height:60px;">:</div>
+    <div style="background:#25D366; border-radius:8px; padding:12px 18px; min-width:60px;">
+      <div id="seconds" style="font-size:32px; font-weight:bold; color:white;">00</div>
+      <div style="font-size:11px; color:white; opacity:0.8;">SEG</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Salva o tempo no localStorage para não resetar ao recarregar
+  function getExpiry() {
+    let expiry = localStorage.getItem('timerExpiry');
+    if (!expiry) {
+      expiry = Date.now() + 2 * 60 * 60 * 1000; // 2 horas
+      localStorage.setItem('timerExpiry', expiry);
+    }
+    return parseInt(expiry);
+  }
+
+  function updateTimer() {
+    const remaining = getExpiry() - Date.now();
+
+    if (remaining <= 0) {
+      // Reseta o timer quando zerar
+      localStorage.removeItem('timerExpiry');
+      document.getElementById('hours').textContent = '00';
+      document.getElementById('minutes').textContent = '00';
+      document.getElementById('seconds').textContent = '00';
+      return;
+    }
+
+    const h = Math.floor(remaining / 3600000);
+    const m = Math.floor((remaining % 3600000) / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+
+    document.getElementById('hours').textContent = String(h).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+</script>
+  
 </div>
 </div>
 <style>
